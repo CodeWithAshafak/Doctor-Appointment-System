@@ -1,0 +1,10 @@
+#main{
+  background-color: rgb(13, 12, 12);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  
+
+}
