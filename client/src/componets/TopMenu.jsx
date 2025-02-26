@@ -12,6 +12,10 @@ import Modal from 'react-bootstrap/Modal';
 import BASE_URL from '../config';
 
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AiOutlineLogout } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
 
 const TopMenu = () => {
   const [input, setInput] = useState({})
@@ -33,7 +37,9 @@ const TopMenu = () => {
     try {
       const responce = await axios.post(api,input);
       console.log(responce);
-      alert("okk")
+      toast.success(responce.data.msg)
+      
+      setShow(false)
     } catch (error) {
       console.log(error);
       alert(error)
@@ -54,6 +60,7 @@ const TopMenu = () => {
             navbarScroll
           >
             <Nav.Link as={Link} to='home' >Home</Nav.Link>
+            <Nav.Link as={Link} to='searchdoctor' >Find Doctor</Nav.Link>
         
           </Nav>
           <Form className="d-flex">
@@ -67,7 +74,12 @@ const TopMenu = () => {
           </Form>
 
         <Nav className="ms-md-4 ms-lg-auto">
-        <Nav.Link id='heading' onClick={handleShow}>Doctor Registration </Nav.Link>
+         
+         
+        <Nav.Link id='registration' onClick={handleShow}>   <AiOutlineLogout size='25' />  Doctor Registration </Nav.Link>
+
+
+        <Nav.Link id='login' onClick={handleShow}>       <CgProfile  size='25'/> Doctor LogIn </Nav.Link>
     
 
 
@@ -163,7 +175,9 @@ const TopMenu = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    
+     
+
+      <ToastContainer />
     </>
   )
 }
