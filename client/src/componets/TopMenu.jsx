@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import Modal from 'react-bootstrap/Modal';
+import BASE_URL from '../config';
 
-
+import axios from 'axios'
 
 const TopMenu = () => {
   const [input, setInput] = useState({})
@@ -26,8 +27,19 @@ const TopMenu = () => {
     setInput(Values=>({...Values,[name]:value }))
     console.log(input);
   }
-  const handleSubmit  = (e)=>{
-    e.preventDefault()
+  const handleSubmit=async(e)=>{
+     e.preventDefault()
+     let api =`${BASE_URL}/doctor/registration`
+    try {
+      const responce = await axios.post(api,input);
+      console.log(responce);
+      alert("okk")
+    } catch (error) {
+      console.log(error);
+      alert(error)
+      
+      
+    }
   }
   return (
     <>
@@ -42,12 +54,7 @@ const TopMenu = () => {
             navbarScroll
           >
             <Nav.Link as={Link} to='home' >Home</Nav.Link>
-           
-
-            
-
-
-            
+        
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -141,7 +148,7 @@ const TopMenu = () => {
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password"  />
+        <Form.Control type="password"  name='password' onChange={handleInput} />
       </Form.Group>
       
       
