@@ -5,7 +5,8 @@ import Home from './pages/Home'
 
 
 import Doctorlogin from './pages/Doctorlogin'
-// import Searchdoctor from './pages/Searchdoctor'
+import Searchdoctor from './Searchdoctor'
+
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
       <Route path='/' element={<Layout/>}>
       <Route index  element={<Home/>} />
       <Route path='home'  element={<Home/>} />
-      {/* <Route path='searchdoctor'  element={<Searchdoctor/>} /> */}
+      <Route path='searchdoctor'  element={<Searchdoctor/>} />
 
       <Route path='doctorlogin'  element={<Doctorlogin/>} />
      
