@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -47,6 +49,9 @@ const TopMenu = () => {
       
     }
   }
+
+
+
   return (
     <>
      <Navbar expand="lg" className="bg-info" >
@@ -79,7 +84,7 @@ const TopMenu = () => {
         <Nav.Link id='registration' onClick={handleShow}>   <AiOutlineLogout size='25' />  Doctor Registration </Nav.Link>
 
 
-        <Nav.Link id='login' onClick={handleShow}>       <CgProfile  size='25'/> Doctor LogIn </Nav.Link>
+        <Nav.Link  as={Link} to='doctorlogin' id='login' >       <CgProfile  size='25'/> Doctor LogIn </Nav.Link>
     
 
 
@@ -175,9 +180,17 @@ const TopMenu = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-     
+    
+
+
+      
+
 
       <ToastContainer />
+
+
+
+
     </>
   )
 }

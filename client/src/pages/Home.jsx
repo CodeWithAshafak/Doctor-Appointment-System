@@ -7,6 +7,8 @@ import  "../css/home.css"
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Hero from './Hero';
+import Corosol from './corosol';
 const Home = () => {
 
   const [mydata , setMyData] = useState([])
@@ -53,6 +55,9 @@ const Home = () => {
   })
   return (
     <>
+    
+    <Corosol/>
+    <Hero/>
       <Container id='main'>
 
 
@@ -60,6 +65,8 @@ const Home = () => {
           <h3>Our Speciality Doctors</h3>
           <p>we take pride in our team of highly skilled and experienced specialists dedicated to providing top-quality healthcare. Our expert doctors specialize in various fields to ensure comprehensive care tailored to your needs.</p>
         </div>
+
+
 
         <div className="doctors">
          {result}

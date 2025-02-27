@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './pages/Home'
 import Searchdoctor from './pages/searchdoctor'
+import Doctorlogin from './pages/Doctorlogin'
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Route index  element={<Home/>} />
       <Route path='home'  element={<Home/>} />
       <Route path='searchdoctor'  element={<Searchdoctor/>} />
+      <Route path='doctorlogin'  element={<Doctorlogin/>} />
      
 
 

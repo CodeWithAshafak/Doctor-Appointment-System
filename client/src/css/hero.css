@@ -1,0 +1,66 @@
+.booking-section {
+  background: #f5efff;
+}
+
+.booking-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.booking-description {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.appointment-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6a0dad;
+}
+
+.date-options {
+  margin-top: 10px;
+}
+
+.date-box {
+  background: #e0d4ff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.date-box.active {
+  background: #6a0dad;
+  color: #fff;
+}
+
+.slot-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slot-box {
+  background: #e0d4ff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.slot-box.active {
+  background: #6a0dad;
+  color: #fff;
+}

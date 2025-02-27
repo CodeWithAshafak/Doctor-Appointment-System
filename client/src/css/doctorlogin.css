@@ -1,0 +1,60 @@
+/* doctorlogin.css */
+
+#formcoverlogin {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#loginheading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+#loginform {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginform .form-label {
+  font-weight: 600;
+  color: #555;
+}
+
+#loginform .form-control {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#loginform .form-text {
+  font-size: 12px;
+  color: #777;
+}
+
+#loginform .form-check-label {
+  font-size: 14px;
+  color: #555;
+}
+
+#loginform .btn-primary {
+  background: #007bff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#loginform .btn-primary:hover {
+  background: #0056b3;
+}
