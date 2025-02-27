@@ -5,7 +5,7 @@ import Home from './pages/Home'
 
 
 import Doctorlogin from './pages/Doctorlogin'
-import Searchdoctor from './pages/Searchdoctor'
+// import Searchdoctor from './pages/Searchdoctor'
 
 
 const App = () => {
