@@ -2,8 +2,10 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './pages/Home'
-import Searchdoctor from './pages/searchdoctor'
+
+
 import Doctorlogin from './pages/Doctorlogin'
+import Searchdoctor from './pages/Searchdoctor'
 
 
 const App = () => {
@@ -16,7 +18,8 @@ const App = () => {
       <Route path='/' element={<Layout/>}>
       <Route index  element={<Home/>} />
       <Route path='home'  element={<Home/>} />
-      {/* <Route path='searchdoctor'  element={<Searchdoctor/>} /> */}
+      <Route path='searchdoctor'  element={<Searchdoctor/>} />
+
       <Route path='doctorlogin'  element={<Doctorlogin/>} />
      
 
